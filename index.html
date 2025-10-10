@@ -10,9 +10,17 @@ html, body {
   overflow: hidden;
   margin: 0;
   padding: 0;
-  background: #000;
 }
 
+	  video#fondo {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
 .wrapper {
   width: 2304px;
   height: 768px;
@@ -24,9 +32,6 @@ html, body {
 
   body {
       margin: 0;
-    background-image: url("fondo.png");
-    background-size: cover;
-    background-repeat: no-repeat;
     height: 768px;
     width: 2304px;
     font-family: sans-serif;
@@ -51,27 +56,31 @@ html, body {
 
     #score-brasil {
   position: absolute;
-   left: 380px;
+   left: 930px;
   top: 480px;
   transform: translate(-50%, -50%);
   font-size: 150px;
-  color: #00157F;
+  color: #FFFFFF;
   font-weight: bold;
     }
 
     #score-colombia {
   position: absolute;
- left: 1950px;
+ left: 1367px;
   top: 480px; 
   transform: translate(-50%, -50%);
   font-size: 150px;
-  color: #00157F;
+  color: #FFFFFF;
   font-weight: bold;
 }
 
   </style>
 </head>
 <body>
+		<video autoplay muted loop id="fondo">
+    <source src="fondo.mp4" type="video/mp4">
+    Tu navegador no soporta el video.
+  </video>
   <div class="wrapper">
     <div class="contenedor-marcador">
       <div id="score-brasil" class="score">-</div>
@@ -101,3 +110,4 @@ html, body {
   </script>
 </body>
 </html>
+
